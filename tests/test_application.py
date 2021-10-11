@@ -42,6 +42,11 @@ def test_model_detection(app):
     assert device.model == 'ZiGate USB-TTL {}'.format(FAKE_FIRMWARE_VERSION)
 
 
+def test_zigate_device_initialized(app):
+    device = zigpy_zigate.zigbee.application.ZiGateDevice(app, 0, 0)
+    assert device.is_initialized
+
+
 @pytest.mark.asyncio
 async def test_form_network_success(app):
     app._api.set_channel = AsyncMock()

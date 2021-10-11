@@ -227,6 +227,10 @@ class ZiGateDevice(zigpy.device.Device):
         self._model = '{} {}'.format(model, application.version)
 
     @property
+    def is_initialized(self):
+        return True
+
+    @property
     def manufacturer(self):
         return "ZiGate"
 
