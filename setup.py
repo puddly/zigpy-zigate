@@ -26,6 +26,7 @@ requires = [
     'pyserial>=3.5',
     'pyserial-asyncio; platform_system!="Windows"',
     'pyserial-asyncio!=0.5; platform_system=="Windows"',  # 0.5 broke writes
+    'pyusb>=1.1.0',
     'zigpy>=0.22.2',
 ]
 
